@@ -21,7 +21,7 @@ class MainActivity : Activity() {
        // val descricao = findViewById<TextView>(R.id.descricao)
         val recycleView = findViewById<RecyclerView>(R.id.recycleView)
        recycleView.adapter = ListProductiveness(context = this, produtos = listOf(
-           Produto(nome = "Manga", descricao = "Desc 1", valor = BigDecimal("12.90")),
+           Produto(nome = "Morango", descricao = "Desc 1", valor = BigDecimal("12.90")),
            Produto(nome = "Laranja", descricao = "Desc 2", valor = BigDecimal("16.90"))
        ))
       // recycleView.layoutManager = LinearLayoutManager(this)
