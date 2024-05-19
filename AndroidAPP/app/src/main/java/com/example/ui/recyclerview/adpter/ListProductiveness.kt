@@ -11,8 +11,10 @@ import com.example.orgs.R
 
 class ListProductiveness(
     private val context: Context,
-    private val produtos: List<Produto>
+    produtos: List<Produto>
 ) : RecyclerView.Adapter<ListProductiveness.ViewHolder>() {
+
+    private val produtos = produtos.toMutableList()
 
    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
        fun Vincula(produto: Produto) {
@@ -38,4 +40,9 @@ class ListProductiveness(
 
 
     override fun getItemCount(): Int = produtos.size
+    fun atualiza(produtos: List<Produto>) {
+        this.produtos.clear()
+        this.produtos.addAll(produtos)
+        notifyDataSetChanged()
+    }
 }
